@@ -12,7 +12,7 @@ def main():
         print("Missing binary!")
         sys.exit(2)
 
-    arguments = ["run", "--web.listen-address=0.0.0.0:9091"]
+    arguments = ["--web.listen-address=0.0.0.0:9091"]
     if tool_data_dir := os.environ.get("TOOL_DATA_DIR"):
         home_dir = PosixPath(tool_data_dir)
         if home_dir.exists():
