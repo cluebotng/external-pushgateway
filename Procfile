@@ -1,0 +1,1 @@
+run-pushgateway: ./entrypoint.py
