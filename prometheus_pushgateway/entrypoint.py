@@ -7,7 +7,7 @@ from pathlib import PosixPath
 def main():
     # Note: We replace the current process, rather than running as a subprocess,
     #      so `alloy` is essentially being run from the launcher.
-    binary_path = PosixPath(__file__).parent / "pushgateway"
+    binary_path = PosixPath(__file__).parent.parent / "pushgateway"
     if not binary_path.is_file():
         print("Missing binary!")
         sys.exit(2)
