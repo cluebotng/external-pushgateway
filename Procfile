@@ -1,1 +1,1 @@
-run-pushgateway: ./entrypoint.py
+run-pushgateway: ./prometheus_pushgateway/entrypoint.py

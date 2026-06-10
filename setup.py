@@ -3,7 +3,6 @@ import os
 import subprocess
 from pathlib import PosixPath
 
-
 TARGET_RELEASE = "1.11.1"
 WORKSPACE_DIR = PosixPath("/workspace")
 
@@ -38,16 +37,8 @@ def install_package():
     os.remove(f"/tmp/pushgateway-{TARGET_RELEASE}.linux-amd64.tar.gz")
 
 
-def appease_poetry():
-    # Poetry expects a Python package from `setup.py install`, create a minimal one
-    package_dir = PosixPath("/workspace/external_pushgateway")
-    package_dir.mkdir(parents=True)
-    (package_dir / "__init__.py").open("w").close()
-
-
 def main():
     install_package()
-    appease_poetry()
 
 
 if __name__ == "__main__":
