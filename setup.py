@@ -17,8 +17,10 @@ def install_package():
             "-L",
             "-o",
             f"/tmp/pushgateway-{TARGET_RELEASE}.linux-amd64.tar.gz",
-            f"https://github.com/prometheus/pushgateway/releases/download/v{TARGET_RELEASE}/"
-            f"pushgateway-{TARGET_RELEASE}.linux-amd64.tar.gz",
+            (
+                f"https://github.com/prometheus/pushgateway/releases/download/v{TARGET_RELEASE}/"
+                f"pushgateway-{TARGET_RELEASE}.linux-amd64.tar.gz"
+            ),
         ],
         check=True,
     )
