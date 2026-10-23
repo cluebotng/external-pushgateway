@@ -5,6 +5,7 @@ from pathlib import PosixPath
 
 TARGET_RELEASE = "1.11.1"
 WORKSPACE_DIR = PosixPath("/workspace")
+TARGET_DIR = WORKSPACE_DIR / "prometheus_pushgateway"
 
 
 def install_package():
@@ -28,7 +29,7 @@ def install_package():
         [
             "tar",
             "-C",
-            WORKSPACE_DIR.as_posix(),
+            TARGET_DIR.as_posix(),
             "-xf",
             f"/tmp/pushgateway-{TARGET_RELEASE}.linux-amd64.tar.gz",
             "--strip-components=1",
