@@ -3,7 +3,7 @@ import os
 import subprocess
 from pathlib import PosixPath
 
-TARGET_RELEASE = "1.11.1"
+TARGET_RELEASE = "1.11.4"
 WORKSPACE_DIR = PosixPath("/workspace")
 TARGET_DIR = WORKSPACE_DIR / "prometheus_pushgateway"
 
